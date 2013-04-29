@@ -32,7 +32,7 @@ Moose::Util::TypeConstraints::coerce(
 has overlay => ( isa => $gog, ro, required, coerce );
 has distmap => ( isa => 'Gentoo::Perl::Distmap', ro, lazy_build );
 
-sub _warn { return warn $_[1] }
+sub _warn { shift; return warn shift; }
 
 sub _on_metadata_xml_missing {
   my ( $self, $category, $package, $xml_file ) = @_;
