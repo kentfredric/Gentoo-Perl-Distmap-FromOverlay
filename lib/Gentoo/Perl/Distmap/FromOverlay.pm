@@ -105,7 +105,6 @@ sub _on_remote {
 
   my $upstream = $remote->content();
 
-  die "no overlay_name" unless exists $stash->{overlay_name};
   my $distmapargs = {
     category     => $stash->{category_name},
     package      => $stash->{package_name},
