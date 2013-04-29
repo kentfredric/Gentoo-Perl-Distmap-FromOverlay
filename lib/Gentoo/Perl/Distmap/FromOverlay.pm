@@ -181,7 +181,7 @@ version 0.1.0
     my $og = Gentoo::Overlay::Group->new();
     $og->add_overlay('/path/to/overlay');
     my $translator = Gentoo::Perl::Distmap::FromOverlay->new( overlay => $og )
-    # or 
+    # or
     my $translator = Gentoo::Perl::Distmap::FromOverlay->new( overlay => Gentoo::Overlay::Group::INI->load_named('foo')->overlay_group );
 
 and then
