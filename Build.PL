@@ -12,7 +12,7 @@ my %module_build_args = (
   "configure_requires" => {
     "Module::Build" => "0.4004"
   },
-  "dist_abstract" => "Scrape an Overlay to produce a Distmap",
+  "dist_abstract" => "Scrape an Overlay to produce a C<Distmap>",
   "dist_author" => [
     "Kent Fredric <kentfredric\@gmail.com>"
   ],

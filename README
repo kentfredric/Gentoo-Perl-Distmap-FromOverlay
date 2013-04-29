@@ -1,6 +1,6 @@
 NAME
     Gentoo::Perl::Distmap::FromOverlay - Scrape an Overlay to produce a
-    Distmap
+    "Distmap"
 
 VERSION
     version 0.1.0
@@ -20,7 +20,7 @@ SYNOPSIS
 
         my $result = $translator->distmap;
 
-    And see Gentoo::Perl::Distmap for details on using the result.
+    And see "<"Gentoo::Perl::Distmap" "> for details on using the result.
 
 AUTHOR
     Kent Fredric <kentfredric@gmail.com>

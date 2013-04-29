@@ -1,5 +1,5 @@
 ---
-abstract: 'Scrape an Overlay to produce a Distmap'
+abstract: 'Scrape an Overlay to produce a C<Distmap>'
 author:
   - 'Kent Fredric <kentfredric@gmail.com>'
 build_requires:

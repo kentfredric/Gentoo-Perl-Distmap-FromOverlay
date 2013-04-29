@@ -9,7 +9,7 @@ BEGIN {
   $Gentoo::Perl::Distmap::FromOverlay::VERSION = '0.1.0';
 }
 
-# ABSTRACT: Scrape an Overlay to produce a Distmap
+# ABSTRACT: Scrape an Overlay to produce a C<Distmap>
 
 use Moose;
 use MooseX::Has::Sugar;
@@ -169,7 +169,7 @@ __END__
 
 =head1 NAME
 
-Gentoo::Perl::Distmap::FromOverlay - Scrape an Overlay to produce a Distmap
+Gentoo::Perl::Distmap::FromOverlay - Scrape an Overlay to produce a C<Distmap>
 
 =head1 VERSION
 
@@ -191,7 +191,7 @@ and then
 
     my $result = $translator->distmap;
 
-And see L<Gentoo::Perl::Distmap> for details on using the result.
+And see L<<C<Gentoo::Perl::Distmap> >> for details on using the result.
 
 =head1 AUTHOR
 
