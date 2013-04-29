@@ -177,7 +177,7 @@ version 0.1.0
     use Gentoo::Perl::Distmap::FromOverlay;
 
     my $translator = Gentoo::Perl::Distmap::FromOverlay->new( overlay => Gentoo::Overlay->new( '/path/to/overlay' ) )
-    # or 
+    # or
     my $og = Gentoo::Overlay::Group->new();
     $og->add_overlay('/path/to/overlay');
     my $translator = Gentoo::Perl::Distmap::FromOverlay->new( overlay => $og )
