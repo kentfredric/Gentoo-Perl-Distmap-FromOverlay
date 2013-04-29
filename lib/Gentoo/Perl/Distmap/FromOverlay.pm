@@ -86,7 +86,7 @@ sub _on_xml_missing_remoteid {
 }
 
 sub _on_ebuild {
-  my ( $self, $record, $stash, $distmap ) = @_;
+  my ( $self, $distmaprecord, $stash, $distmap ) = @_;
   return sub {
     my ( $it, $estash ) = @_;
     $self->_on_enter_ebuild($estash);
@@ -94,7 +94,7 @@ sub _on_ebuild {
     my $p       = $stash->{package_name};
     $version =~ s/\.ebuild$//;
     $version =~ s/^\Q${p}\E-//;
-    $distmap->add_version( %{$record}, version => $version, );
+    $distmap->add_version( %{$distmaprecord}, version => $version, );
   };
 }
 
