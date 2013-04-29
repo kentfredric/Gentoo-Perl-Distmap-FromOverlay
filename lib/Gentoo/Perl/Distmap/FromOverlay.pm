@@ -114,6 +114,7 @@ sub _on_remote {
   };
   my $on_ebuild = $self->_on_ebuild( $distmapargs, $stash, $distmap );
   $stash->{package}->iterate( ebuilds => $on_ebuild );
+  return;
 }
 
 sub _on_package {
