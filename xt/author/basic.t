@@ -15,14 +15,14 @@ my $conversion = Gentoo::Perl::Distmap::FromOverlay->new(
 );
 
 local *Gentoo::Perl::Distmap::FromOverlay::_on_enter_category = sub {
-    *STDERR->print '/';
+    *STDERR->print( '/' );
 };
 
 local *Gentoo::Perl::Distmap::FromOverlay::_on_enter_package = sub {
-    *STDERR->print '_';
+    *STDERR->print( '_' );
 };
 local *Gentoo::Perl::Distmap::FromOverlay::_on_enter_ebuild = sub {
-    *STDERR->print '.';
+    *STDERR->print( '.' );
 };
 
 my $result = $conversion->distmap;
