@@ -32,9 +32,11 @@ Moose::Util::TypeConstraints::coerce(
 has overlay => ( isa => $gog, ro, required, coerce );
 has distmap => ( isa => 'Gentoo::Perl::Distmap', ro, lazy_build );
 
-sub _warn { shift; 
-    require Carp;
-    return Carp::carp(shift); }
+sub _warn {
+  shift;
+  require Carp;
+  return Carp::carp(shift);
+}
 
 sub _on_metadata_xml_missing {
   my ( $self, $category, $package, $xml_file ) = @_;
@@ -61,21 +63,23 @@ sub _get_xml_smart {
 
 sub _on_xml_missing_pkgmetadata {
   my ( $self, $xmlfile ) = @_;
-  return;
 
+  #  return;
   return $self->_warn( '<pkgmetadata> missing in ' . $xmlfile );
 }
 
 sub _on_xml_missing_upstream {
   my ( $self, $xmlfile ) = @_;
-  return $self->_warn( 'pkgmetadata/upstream missing in ' . $xmlfile );
+  return;
+
+  #  return $self->_warn( 'pkgmetadata/upstream missing in ' . $xmlfile );
 }
 
 sub _on_xml_missing_remoteid {
   my ( $self, $xmlfile ) = @_;
   return;
 
-  return $self->_warn( 'pkgmetadata/upstream/remote-id missing in ' . $xmlfile );
+  #  return $self->_warn( 'pkgmetadata/upstream/remote-id missing in ' . $xmlfile );
 }
 
 sub _on_ebuild {
