@@ -191,7 +191,7 @@ and then
 
     my $result = $translator->distmap;
 
-And see L<<C<Gentoo::Perl::Distmap> >> for details on using the result.
+And see L<< C<Gentoo::Perl::Distmap>|Gentoo::Perl::Distmap >> for details on using the result.
 
 =head1 AUTHOR
 

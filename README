@@ -20,7 +20,7 @@ SYNOPSIS
 
         my $result = $translator->distmap;
 
-    And see "<"Gentoo::Perl::Distmap" "> for details on using the result.
+    And see "Gentoo::Perl::Distmap" for details on using the result.
 
 AUTHOR
     Kent Fredric <kentfredric@gmail.com>
