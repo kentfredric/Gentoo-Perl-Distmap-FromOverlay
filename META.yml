@@ -22,6 +22,7 @@ provides:
     version: v0.1.0
 requires:
   Carp: 0
+  Gentoo::Overlay: v1.0.5
   Gentoo::Overlay::Group: 0
   Gentoo::Perl::Distmap: 0
   Moose: 0
@@ -43,6 +44,7 @@ x_BuiltWith:
     Dist::Zilla::PluginBundle::Author::KENTNL::Lite: 'NA(possibly not installed)'
     File::Find: 1.23
     File::Temp: 0.23
+    Gentoo::Overlay: 1.0.5
     Gentoo::Overlay::Group: 0.2.0
     Gentoo::Perl::Distmap: 0.1.4
     Module::Build: 0.4004
