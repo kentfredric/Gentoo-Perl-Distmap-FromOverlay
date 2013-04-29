@@ -70,6 +70,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/kentfredric/Gentoo-Perl-Distmap-FromOverlay/issues"
+      },
+      "homepage" : "https://github.com/kentfredric/Gentoo-Perl-Distmap-FromOverlay",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/kentfredric/Gentoo-Perl-Distmap-FromOverlay.git",
+         "web" : "https://github.com/kentfredric/Gentoo-Perl-Distmap-FromOverlay"
+      }
+   },
    "version" : "0.1.0",
    "x_BuiltWith" : {
       "modules" : {
