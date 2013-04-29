@@ -40,22 +40,22 @@ sub _warn {
 
 sub _on_metadata_xml_missing {
   my ( $self, $category, $package, $xml_file ) = @_;
-  return $self->_warn( 'No metadata.xml for ' . $category . '/' . $package . ' ' . $xml_file );
+  return $self->_warn( sprintf 'No metadata.xml for %s/%s %s', $category, $package, $xml_file );
 }
 
 sub _on_enter_category {
   my ( $self, $category, $c ) = @_;
-  return
+  return;
 }
 
 sub _on_enter_package {
   my ( $self, $category, $package, $c ) = @_;
-  return
+  return;
 }
 
 sub _on_enter_ebuild {
   my ( $self, $c ) = @_;
-  return
+  return;
 }
 
 sub _get_xml_smart {
