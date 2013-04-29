@@ -86,7 +86,7 @@ sub _on_xml_missing_remoteid {
 }
 
 sub _on_ebuild {
-  my ( $self, $distmaprecord, $stash, $distmap ) = @_;
+  my ( $self, $distmapargs, $stash, $distmap ) = @_;
   return sub {
     my ( $it, $estash ) = @_;
     $self->_on_enter_ebuild($estash);
@@ -94,7 +94,7 @@ sub _on_ebuild {
     my $p       = $stash->{package_name};
     $version =~ s/\.ebuild$//;
     $version =~ s/^\Q${p}\E-//;
-    $distmap->add_version( %{$distmaprecord}, version => $version, );
+    $distmap->add_version( %{$distmapargs}, version => $version, );
   };
 }
 
@@ -106,13 +106,13 @@ sub _on_remote {
   my $upstream = $remote->content();
 
   die "no overlay_name" unless exists $stash->{overlay_name};
-  my $record = {
+  my $distmapargs = {
     category     => $stash->{category_name},
     package      => $stash->{package_name},
     repository   => $stash->{overlay_name},
     distribution => $upstream,
   };
-  my $on_ebuild = $self->_on_ebuild( $record, $stash, $distmap );
+  my $on_ebuild = $self->_on_ebuild( $distmapargs, $stash, $distmap );
   $stash->{package}->iterate( ebuilds => $on_ebuild );
 }
 
