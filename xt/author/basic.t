@@ -15,23 +15,20 @@ my $conversion = Gentoo::Perl::Distmap::FromOverlay->new(
 );
 
 local *Gentoo::Perl::Distmap::FromOverlay::_on_enter_category = sub {
-    print '/';
+    *STDERR->print '/';
 };
 
 local *Gentoo::Perl::Distmap::FromOverlay::_on_enter_package = sub {
-    print '_';
+    *STDERR->print '_';
 };
 local *Gentoo::Perl::Distmap::FromOverlay::_on_enter_ebuild = sub {
-    print '.';
+    *STDERR->print '.';
 };
 
 my $result = $conversion->distmap;
-
 isnt( $result , undef , 'Got something' );
 isa_ok( $result, 'Gentoo::Perl::Distmap' );
 
-use Data::Dump qw(pp);
-pp $result->map;
 
 done_testing;
 
