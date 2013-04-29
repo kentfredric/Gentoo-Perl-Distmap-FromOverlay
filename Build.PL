@@ -23,6 +23,7 @@ my %module_build_args = (
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
+    "Carp" => 0,
     "Gentoo::Overlay::Group" => 0,
     "Gentoo::Perl::Distmap" => 0,
     "Moose" => 0,

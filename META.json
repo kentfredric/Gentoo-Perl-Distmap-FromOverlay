@@ -43,6 +43,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Carp" : "0",
             "Gentoo::Overlay::Group" : "0",
             "Gentoo::Perl::Distmap" : "0",
             "Moose" : "0",
@@ -72,6 +73,7 @@
    "version" : "0.1.0",
    "x_BuiltWith" : {
       "modules" : {
+         "Carp" : "1.28",
          "Dist::Zilla::PluginBundle::Author::KENTNL" : "1.7.3",
          "Dist::Zilla::PluginBundle::Author::KENTNL::Lite" : "NA(possibly not installed)",
          "File::Find" : "1.23",
