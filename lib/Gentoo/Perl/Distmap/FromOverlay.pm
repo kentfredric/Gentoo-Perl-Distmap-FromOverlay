@@ -45,14 +45,17 @@ sub _on_metadata_xml_missing {
 
 sub _on_enter_category {
   my ( $self, $category, $c ) = @_;
+  return
 }
 
 sub _on_enter_package {
   my ( $self, $category, $package, $c ) = @_;
+  return
 }
 
 sub _on_enter_ebuild {
   my ( $self, $c ) = @_;
+  return
 }
 
 sub _get_xml_smart {
