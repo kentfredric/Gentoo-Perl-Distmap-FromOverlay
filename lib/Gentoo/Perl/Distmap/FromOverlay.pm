@@ -92,7 +92,7 @@ sub _on_ebuild {
     $self->_on_enter_ebuild($estash);
     my $version = $estash->{ebuild_name};
     my $p       = $stash->{package_name};
-    $version =~ s/\.ebuild$//;
+    $version =~ s/[.]ebuild$//;
     $version =~ s/^\Q${p}\E-//;
     $distmap->add_version( %{$distmapargs}, version => $version, );
   };
